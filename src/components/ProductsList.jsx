@@ -26,7 +26,7 @@ export default function ProductsList() {
               />
               <div className="flex justify-between items-center mb-6">
                 <p className="text-slate-700 text-lg">{el.title}</p>
-                <p className="text-slate-900 font-bold">{el.price}</p>
+                <p className="text-slate-900 font-bold">{el.price}$</p>
               </div>
               <button
                 onClick={() => dispatch(addOneToCart(el.id))}

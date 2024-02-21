@@ -14,9 +14,13 @@ export const products = createSlice({
   },
 
   extraReducers: (builder) => {
-    builder.addCase("cart/createCartItem", (state, action) => {
-      state.items.find((el) => el.id === action.payload.id).picked = true;
-    });
+    builder
+      .addCase("cart/createCartItem", (state, action) => {
+        state.items.find((el) => el.id === action.payload.id).picked = true;
+      })
+      .addCase("cart/deleteFromCart", (state, action) => {
+        state.items.find((el) => el.id === action.payload).picked = false;
+      });
   },
 });
 
