@@ -1,3 +1,4 @@
+import FloatingCartButton from "./components/FloatingCartButton";
 import ProductsList from "./components/ProductsList";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
           <ProductsList />
         </div>
       </div>
+      <FloatingCartButton />
     </>
   );
 }
